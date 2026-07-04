@@ -21,6 +21,7 @@ Detaljerad kunskap, terminologi, språk, innehåll, UX-riktlinjer, beslut och ar
 - `LANGUAGE_GUIDE.md` – ton, språk och skrivregler
 - `CONTENT_GUIDE.md` – hjälptexter, instruktioner och exporttexter
 - `UX_GUIDELINES.md` – vägledning, flöden och interaktionsprinciper
+- `PRODUCT_STRUCTURE.md` – produktstruktur, startsida och kontrollcenter-känsla för v1.0
 - `DECISIONS.md` – viktiga beslut och avgränsningar
 
 Blueprinten ska inte innehålla all kunskap. Den ska hänvisa vidare när informationen hör hemma i ett annat dokument.

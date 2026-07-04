@@ -32,6 +32,7 @@ Målet är att skapa en tydlig och professionell källa till sanning innan imple
 
 - `README.md` finns.
 - `docs/APP_BLUEPRINT.md` finns och beskriver produktens grundkrav.
+- `docs/PRODUCT_STRUCTURE.md` finns och beskriver appens produktstruktur, startsida och kontrollcenter-känsla för v1.0.
 - Projektregler finns i `.cursor/rules/project-rules.mdc`.
 - Appen är avgränsad som fristående produkt.
 - Onboarding App v1.0 är beslutad som referens för design, struktur, arbetsprocess, dokumentation och arkitektur.

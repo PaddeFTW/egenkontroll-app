@@ -27,6 +27,7 @@ Primära dokument:
 - [`docs/LANGUAGE_GUIDE.md`](docs/LANGUAGE_GUIDE.md) – ton, språk och skrivregler
 - [`docs/CONTENT_GUIDE.md`](docs/CONTENT_GUIDE.md) – hjälptexter, instruktioner och exporttexter
 - [`docs/UX_GUIDELINES.md`](docs/UX_GUIDELINES.md) – UX-principer och vägledning
+- [`docs/PRODUCT_STRUCTURE.md`](docs/PRODUCT_STRUCTURE.md) – produktstruktur, startsida och kontrollcenter-känsla
 - [`docs/DECISIONS.md`](docs/DECISIONS.md) – beslut och avgränsningar
 - [`docs/CHANGELOG.md`](docs/CHANGELOG.md) – viktiga dokumentationsändringar
 
@@ -43,6 +44,7 @@ docs/
 ├── LANGUAGE_GUIDE.md
 ├── CONTENT_GUIDE.md
 ├── UX_GUIDELINES.md
+├── PRODUCT_STRUCTURE.md
 ├── DECISIONS.md
 ├── CHANGELOG.md
 ├── source-material/
