@@ -7,6 +7,24 @@
 **Produktfamilj:** Quality WorX Apps  
 **Kodstatus:** Redo för implementationsplan
 
+## Dokumentrelationer
+
+Detta dokument beskriver produkten och dess godkända blueprint.
+
+Detaljerad kunskap, terminologi, språk, innehåll, UX-riktlinjer, beslut och arbetsstatus ska dokumenteras i separata styrdokument:
+
+- `PROJECT_STATUS.md` – aktuell status och nästa steg
+- `KNOWLEDGE_BASE.md` – kunskap från källmaterial och byggprocesser
+- `DOMAIN_MODEL.md` – centrala begrepp och relationer
+- `TERMINOLOGY.md` – rekommenderade ord och termer
+- `DEFINITIONS.md` – korta definitioner
+- `LANGUAGE_GUIDE.md` – ton, språk och skrivregler
+- `CONTENT_GUIDE.md` – hjälptexter, instruktioner och exporttexter
+- `UX_GUIDELINES.md` – vägledning, flöden och interaktionsprinciper
+- `DECISIONS.md` – viktiga beslut och avgränsningar
+
+Blueprinten ska inte innehålla all kunskap. Den ska hänvisa vidare när informationen hör hemma i ett annat dokument.
+
 ---
 
 ## 1. Syfte
@@ -877,7 +895,7 @@ Blueprinten är klar när:
 docs/APP_BLUEPRINT.md
 ```
 
-5. Lägg källmaterialet i en privat källmapp eller dokumentera dess plats.
+5. Lägg källmaterialet i `docs/source-material/` eller dokumentera dess plats där.
 6. Skapa implementationsplan.
 7. Först därefter startar kodningen.
 
