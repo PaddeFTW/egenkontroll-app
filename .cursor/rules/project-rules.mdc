@@ -1,0 +1,60 @@
+---
+description: Grundregler för utveckling av Egenkontroll App
+alwaysApply: true
+---
+
+# Egenkontroll App – Projektregler
+
+## Källa till sanning
+
+- Läs alltid `docs/APP_BLUEPRINT.md` innan planering eller implementation.
+- Blueprinten är projektets styrande produktkrav.
+- Lägg inte till funktioner som inte är beslutade i blueprinten.
+
+## Projektets mål
+
+- Bygg en enkel, fristående och säljbar webbapplikation.
+- Bygg inte en stor gemensam plattform.
+- Appen ska kunna utvecklas, publiceras och säljas separat.
+- Betalning och abonnemang ligger utanför appens kärna.
+
+## Arbetsprocess
+
+1. Analysera uppgiften.
+2. Föreslå en liten plan.
+3. Ändra endast det som uppgiften kräver.
+4. Kör relevanta kvalitetskontroller.
+5. Redovisa ändrade filer och resultat.
+6. Gör aldrig commit eller push utan uttryckligt godkännande.
+
+## Kodregler
+
+- Använd TypeScript strict.
+- Undvik `any` om det inte finns särskild motivering.
+- Återanvänd komponenter och typer.
+- Undvik duplicerad kod.
+- Lägg inte till paket utan godkännande.
+- Lägg inte till avancerad arkitektur i förväg.
+- Håll affärslogik separerad från presentationskomponenter.
+
+## Design
+
+- Onboarding App v1.0 är visuell referens.
+- Använd lugn, modern och luftig SaaS-design.
+- Använd Tailwind CSS, shadcn/ui, Radix UI och Lucide.
+- Använd inte Sneat-kod eller tredjepartsmallar.
+- Syncfusion ingår inte i grundlösningen.
+- Figma är inte en obligatorisk del av arbetsprocessen.
+
+## Säkerhet
+
+- Lägg aldrig hemligheter eller API-nycklar i repositoryt.
+- Ändra inte filer utanför projektmappen.
+- Radera inte filer utan uttryckligt godkännande.
+- Kunddata ska hållas separerad och privat.
+
+## Git
+
+- En liten logisk förändring per commit.
+- Kontrollera `git diff` och `git status` före commit.
+- Commit och push görs endast efter användarens godkännande.

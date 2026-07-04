@@ -141,3 +141,16 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Project setup ignores
+.next/
+dist/
+build/
+coverage/
+.env.local
+.env.*.local
+tmp/
+temp/
+exports/
+private/
+customer-data/
