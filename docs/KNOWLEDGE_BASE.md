@@ -6,26 +6,50 @@ Detta dokument samlar verifierad domänkunskap för Egenkontroll App. Det beskri
 
 Kunskapsbasen extraherar kunskap ur källmaterialet. Den kopierar inte Word-layout, tabellstruktur eller grafisk form.
 
+## Innehåll
+
+1. [Syfte](#syfte)
+2. [Innehåll](#innehåll)
+3. [Källhierarki](#källhierarki)
+4. [Hur Dokumentet Ska Användas](#hur-dokumentet-ska-användas)
+5. [Grundförståelse](#grundförståelse)
+6. [Egenkontroll Och Kontrollplan Enligt PBL](#egenkontroll-och-kontrollplan-enligt-pbl)
+7. [Standardflöde För En Egenkontroll](#standardflöde-för-en-egenkontroll)
+8. [Kontrollresultat](#kontrollresultat)
+9. [Kontrollpunktens Kunskapsmodell](#kontrollpunktens-kunskapsmodell)
+10. [Mallbibliotek Och Kontrollområden](#mallbibliotek-och-kontrollområden)
+11. [Roller Och Ansvar](#roller-och-ansvar)
+12. [Vanliga Användarbehov](#vanliga-användarbehov)
+13. [Vanliga Misstag Appen Ska Förebygga](#vanliga-misstag-appen-ska-förebygga)
+14. [UX-Insikter](#ux-insikter)
+15. [Hjälptexter Och Mikrocopy](#hjälptexter-och-mikrocopy)
+16. [Språkprinciper](#språkprinciper)
+17. [Bästa Praxis För Innehåll Och Produkt](#bästa-praxis-för-innehåll-och-produkt)
+18. [Intern Kvalitetsgranskning](#intern-kvalitetsgranskning)
+19. [Spårbarhetsmatris](#spårbarhetsmatris)
+20. [Krav På Framtida Härledda Dokument](#krav-på-framtida-härledda-dokument)
+21. [Öppna Källluckor](#öppna-källluckor)
+
 ## Källhierarki
 
 Primära källor:
 
-- `docs/source-material/orignals/Word/Egenkontroll för bygg (mall).docx`
-- `docs/source-material/orignals/PDF/Egenkontroll för bygg (mall).pdf`
+- `[K1]` `docs/source-material/orignals/Word/Egenkontroll för bygg (mall).docx`
+- `[K2]` `docs/source-material/orignals/PDF/Egenkontroll för bygg (mall).pdf`
 
 Styrande projektkälla:
 
-- `docs/APP_BLUEPRINT.md`
+- `[K3]` `docs/APP_BLUEPRINT.md`
 
 Verifierade externa kompletteringskällor:
 
-- Boverket, PBL kunskapsbanken: Kontrollplan
+- `[K4]` Boverket, PBL kunskapsbanken: Kontrollplan
   `https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/byggprocessen/kontrollplan/`
-- Boverket, PBL kunskapsbanken: Kontrollplanens innehåll
+- `[K5]` Boverket, PBL kunskapsbanken: Kontrollplanens innehåll
   `https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/byggprocessen/kontrollplan/kontrollplanens-innehall/`
-- Boverket, PBL kunskapsbanken: Kontrollplanens utformning
+- `[K6]` Boverket, PBL kunskapsbanken: Kontrollplanens utformning
   `https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/byggprocessen/kontrollplan/kontrollplanens-utformning/`
-- Boverket: Börja bygga
+- `[K7]` Boverket: Börja bygga
   `https://www.boverket.se/sv/byggande/forebygg-fel-brister-skador/stod-forandring/korrekt-tillampning/borjabygga/`
 
 Källstatus:
@@ -34,6 +58,14 @@ Källstatus:
 - PDF-originalet används främst för att förstå export- och blankettförväntan.
 - Word-originalet används främst för textinnehåll och arbetslogik.
 - Den masterlista som nämns i `APP_BLUEPRINT.md` finns inte som separat originalfil i `docs/source-material/` vid denna uppdatering. Blueprintens uppgifter om 11 huvudmallar och 123 kontrollpunkter betraktas därför som godkänd projektanalys, inte som primär originalkälla i denna kunskapsbas.
+
+Källmarkeringar används så här:
+
+- `[K1]` och `[K2]` markerar kunskap direkt från originalprodukten från KvalitetsDokument.se.
+- `[K3]` markerar godkänd produktanalys och beslut från blueprinten.
+- `[K4]` till `[K7]` markerar verifierande eller kompletterande sakstöd från Boverket.
+- `[Härledning]` markerar slutsats som följer av källorna men inte är ordagrant hämtad från en enskild källa.
+- `[Granskningsnotering]` markerar intern kvalitetsbedömning, lucka eller rekommendation.
 
 ## Hur Dokumentet Ska Användas
 
@@ -53,6 +85,8 @@ Skapa inte separata produktbeslut, språkregler eller domänmodeller direkt frå
 
 ### Vad Egenkontroll Betyder
 
+Källmarkering: `[K1]`, `[K2]`, `[Härledning]`
+
 En egenkontroll är en dokumenterad kontroll av att ett utfört arbetsmoment uppfyller de krav som arbetet ska kontrolleras mot. I originalmallen uttrycks syftet som att säkerställa att arbetet har skett enligt fastställda regler, minska behovet av extern kontroll senare i processen och kunna bevisa för en utomstående part att kontrollen har utförts.
 
 I appen ska egenkontroll därför förstås som tre saker samtidigt:
@@ -65,6 +99,8 @@ Egenkontrollen är inte bara en checklista. Den behöver fånga vad som kontroll
 
 ### Praktiskt Syfte
 
+Källmarkering: `[K1]`, `[K2]`, `[Härledning]`
+
 Egenkontrollens praktiska värde är att:
 
 - skapa tydlighet om vad som ska kontrolleras innan arbetet avslutas
@@ -76,11 +112,15 @@ Egenkontrollens praktiska värde är att:
 
 ### Vad Appen Inte Ska Påstå
 
+Källmarkering: `[K3]`, `[K4]`, `[K5]`, `[K6]`, `[K7]`, `[Härledning]`
+
 Appen ska inte ge juridisk rådgivning, tolka PBL automatiskt eller påstå att en enkel digital signering är en kvalificerad elektronisk signatur.
 
 Appen kan hjälpa användaren att dokumentera egenkontroll, men ansvar enligt lag, avtal och kontrollplan ligger fortfarande hos berörda parter.
 
 ## Egenkontroll Och Kontrollplan Enligt PBL
+
+Källmarkering: `[K1]`, `[K4]`, `[K5]`, `[K6]`, `[K7]`, `[Härledning]`
 
 Originalmallen nämner PBL, byggherre, kontrollplan, underentreprenörer, sakkunniga och kontrollansvarig. Boverkets vägledning behövs för att tydliggöra gränserna.
 
@@ -118,6 +158,8 @@ Det är viktigt att inte blanda ihop:
 Samma kontrollpunkt kan förekomma i flera sammanhang, men appen ska uttrycka sig neutralt: den dokumenterar egenkontroller och kan användas som underlag. Den ersätter inte kommunens kontrollplan, sakkunnigintyg eller kontrollansvarigs lagstadgade uppgifter.
 
 ## Standardflöde För En Egenkontroll
+
+Källmarkering: `[K1]`, `[K2]`, `[K3]`, `[Härledning]`
 
 ### 1. Förbered Egenkontrollen
 
@@ -305,6 +347,8 @@ Kunskap:
 
 ## Kontrollresultat
 
+Källmarkering: `[K1]`, `[K2]`, `[K3]`, `[Härledning]`
+
 Originalmallen har tre resultat:
 
 - `1` = Kontrollerat och godkänt
@@ -329,6 +373,8 @@ Regler:
 - Färg får stödja status men får aldrig vara enda informationsbärare.
 
 ## Kontrollpunktens Kunskapsmodell
+
+Källmarkering: `[K1]`, `[K3]`, `[K5]`, `[K6]`, `[Härledning]`
 
 En kontrollpunkt är inte bara en textrad. Den bör förstås som en kontrollerbar fråga eller instruktion kopplad till ett krav, ett arbetsmoment och en ansvarig kontroll.
 
@@ -393,6 +439,8 @@ Exempel på svag formuleringstyp:
 
 ## Mallbibliotek Och Kontrollområden
 
+Källmarkering: `[K3]`, `[Granskningsnotering]`
+
 Enligt den godkända blueprinten ska appens första innehållsversion omfatta 11 huvudmallar och en tom mall. Dessa utgör projektets planerade startbibliotek:
 
 - Bygg - generell
@@ -433,6 +481,8 @@ Den tomma egenkontrollen ska fortfarande följa samma kunskapsmodell:
 - export
 
 ## Roller Och Ansvar
+
+Källmarkering: `[K1]`, `[K4]`, `[K5]`, `[K6]`, `[K7]`, `[Härledning]`
 
 ### Byggherre
 
@@ -523,6 +573,8 @@ Apprelevans:
 
 ## Vanliga Användarbehov
 
+Källmarkering: `[K1]`, `[K2]`, `[K3]`, `[Härledning]`
+
 Användaren behöver kunna:
 
 - komma igång utan att läsa ett långt dokument
@@ -541,6 +593,8 @@ Användaren behöver kunna:
 - återuppta pågående arbete utan informationsförlust
 
 ## Vanliga Misstag Appen Ska Förebygga
+
+Källmarkering: `[K1]`, `[K2]`, `[K3]`, `[Härledning]`
 
 ### Otydliga Referenser
 
@@ -620,6 +674,8 @@ Förebygg:
 
 ## UX-Insikter
 
+Källmarkering: `[K1]`, `[K2]`, `[K3]`, `[Härledning]`
+
 ### Appen Ska Vara Ett Arbetsflöde, Inte Ett Dokument
 
 Word-originalet är en blankett. Appen ska hjälpa användaren genom arbetet:
@@ -669,6 +725,8 @@ Exporten bör ha:
 - signeringar
 
 ## Hjälptexter Och Mikrocopy
+
+Källmarkering: `[K1]`, `[K2]`, `[K3]`, `[Härledning]`
 
 Följande texter är kunskapsunderlag för senare `CONTENT_GUIDE.md`. De är inte slutligt låsta UI-texter.
 
@@ -762,6 +820,8 @@ Hjälptext:
 
 ## Språkprinciper
 
+Källmarkering: `[K1]`, `[K2]`, `[K3]`, `[Härledning]`
+
 Språket ska vara:
 
 - enkelt
@@ -806,6 +866,8 @@ Terminologi som ska användas konsekvent tills separat terminologidokument härl
 
 ## Bästa Praxis För Innehåll Och Produkt
 
+Källmarkering: `[K1]`, `[K2]`, `[K3]`, `[K5]`, `[K6]`, `[Härledning]`
+
 ### Före Kontroll
 
 - Välj en relevant mall.
@@ -843,6 +905,135 @@ Terminologi som ska användas konsekvent tills separat terminologidokument härl
 - Statusförklaringen ska finnas med.
 - Datum, kontrollant och kommentarer ska följa med.
 - Enkel utskrift ska prioriteras framför avancerad dokumentredigering.
+
+## Intern Kvalitetsgranskning
+
+Källmarkering: `[Granskningsnotering]`
+
+### Sammanfattande Bedömning
+
+Kunskapsbasen är konsekvent med `APP_BLUEPRINT.md` och håller sig till Egenkontroll App som fristående MVP-produkt. Den skiljer tydligt mellan originalkunskap, godkänd produktanalys, Boverket-stöd och härledda UX-/produktinsikter.
+
+Dokumentet är tillräckligt komplett för att fungera som sakunderlag för kommande `DOMAIN_MODEL.md`, `TERMINOLOGY.md`, `LANGUAGE_GUIDE.md`, `CONTENT_GUIDE.md` och `UX_GUIDELINES.md`, men det är inte komplett som fullständig branschdatabas eftersom den separata masterlistan med alla kontrollpunkter saknas som originalfil.
+
+### Konsekvenskontroll
+
+Konsekvent:
+
+- Egenkontroll beskrivs som arbetsverktyg, kvalitetssäkring och dokumentationsunderlag.
+- Word-originalet behandlas som kunskapskälla, inte layoutspecifikation.
+- `Ej bedömd` beskrivs konsekvent som digital arbetsstatus, inte som ett fjärde originalresultat.
+- Kommentar krävs konsekvent vid `Ej godkänd` och `Ej kontrollerad`.
+- Enkel signering beskrivs konsekvent som namn, bekräftelse och tidsstämpel, inte avancerad e-signering.
+- Kontrollansvarig skiljs från kontrollant.
+- Appen avgränsas konsekvent från stor plattform, kundportal, organisationshantering och automatisk juridisk kontroll.
+
+Behöver bevakas:
+
+- Begreppen `kontrollmoment` och `kontrollpunkt` används nära varandra. Det är sakligt rimligt eftersom originalmallen använder kontrollmoment och appen behöver kontrollpunkt, men `TERMINOLOGY.md` bör senare fastställa huvudterm i UI.
+- `Beställare/byggherre` är medvetet dubbelt eftersom originalmallen öppnar för båda. Senare UI behöver välja om detta visas som kombinerad etikett eller valbar etikett.
+- `Kontrollansvarig` kan vara både PBL-roll och praktisk granskningsetikett. Appen måste undvika att ge juridisk rolltolkning när projektet bara har en intern ansvarig granskare.
+
+### Kompletthetskontroll
+
+Täckt:
+
+- syfte med egenkontroll
+- praktiskt arbetsflöde
+- grundinformation: beställare/byggherre, entreprenör, referenser
+- kontrollresultat
+- kommentarer vid avvikelse
+- signering och granskning
+- roller och ansvar
+- PBL-relaterad gränsdragning
+- användarbehov
+- vanliga misstag
+- UX-insikter
+- hjälptexter
+- språkprinciper
+- bästa praxis
+- avgränsningar och öppna källluckor
+
+Saknas eller är ofullständigt:
+
+- komplett masterlista med 123 kontrollpunkter som separat verifierbar originalkälla
+- detaljerade kontrollpunkter per huvudmall
+- branschspecifika krav för el, VVS, badrum, betong, rivning, tak, målning, slutbesiktning och daglig säkerhet
+- sakkunniggranskade formuleringar om PBL om appen senare ska visa mer juridisk vägledning
+- exempel på exportstruktur baserad på faktisk slutrapportlayout
+- konkreta tomlägen och feltexter per skärm, vilket bör härledas i `CONTENT_GUIDE.md`
+- detaljerade mobilflöden, vilket bör härledas i `UX_GUIDELINES.md`
+
+### Spårbarhetskontroll
+
+Stark spårbarhet:
+
+- Originalflöde, blankettfält, resultat och signering spåras till `[K1]` och `[K2]`.
+- MVP-scope, mallbibliotek, statusmodell och avgränsningar spåras till `[K3]`.
+- PBL, kontrollplan, byggherre, kontrollansvarig och sakkunnigkontroll spåras till `[K4]` till `[K7]`.
+
+Svagare spårbarhet:
+
+- De 11 mallarna och 123 kontrollpunkterna spåras just nu till `[K3]`, inte till separat masterlisteoriginal.
+- UX-insikter och hjälptexter är härledda från källorna och markerade som `[Härledning]`; de behöver senare produktgranskas i respektive styrdokument.
+
+### Dubbletter
+
+Medveten överlappning:
+
+- Arbetsflödet återkommer i `Standardflöde`, `Vanliga Användarbehov`, `UX-Insikter` och `Bästa Praxis`. Detta är acceptabelt eftersom avsnitten har olika syfte: process, behov, upplevelse och praktisk regel.
+- Kommentar vid avvikelse återkommer i kontrollresultat, misstag, hjälptexter och bästa praxis. Detta är acceptabelt eftersom det är ett centralt produktbeslut.
+- Signering återkommer i arbetsflöde, roller, hjälptexter och bästa praxis. Detta är acceptabelt eftersom signering både är roll-, flödes- och innehållsfråga.
+
+Risk för framtida dubblett:
+
+- När `CONTENT_GUIDE.md` och `UX_GUIDELINES.md` fylls bör detaljerade hjälptexter och UX-regler flyttas eller härledas dit, men kunskapsbasen ska behålla sakunderlaget.
+
+### Motsägelser
+
+Inga direkta motsägelser identifierade mot `APP_BLUEPRINT.md`.
+
+Potentiella tolkningsrisker:
+
+- Boverket-källor beskriver kontrollplan enligt PBL, medan appens kärnflöde främst är arbetsnära egenkontroll. Dokumentet hanterar detta genom tydlig gränsdragning.
+- Originalmallen säger att egenkontrollen ska lämnas till kontrollansvarig, medan Boverket anger att kontrollansvarig normalt inte utför kontrollerna. Dokumentet hanterar detta genom att skilja på `kontrollerad av` och `granskad av kontrollansvarig`.
+- Blueprinten nämner masterlista som granskad källa, men filen finns inte i `docs/source-material/`. Dokumentet hanterar detta genom att märka masterlistans innehåll som `[K3]` och lägga separat masterlista som källlucka.
+
+### Förbättringsförslag
+
+Nästa förbättringar bör göras i denna ordning:
+
+1. Lägg in eller länka separat masterlista med samtliga 123 kontrollpunkter.
+2. Källmärk varje kontrollpunkt när masterlistan finns.
+3. Härled `DOMAIN_MODEL.md` från avsnitten om kontrollpunkt, roller, status och signering.
+4. Härled `TERMINOLOGY.md` och lås huvudtermerna `kontrollpunkt`, `kontrollmoment`, `beställare/byggherre`, `kontrollant` och `kontrollansvarig`.
+5. Härled `CONTENT_GUIDE.md` från hjälptexter och mikrocopy.
+6. Härled `UX_GUIDELINES.md` från UX-insikter, arbetsflöde och misstag appen ska förebygga.
+
+## Spårbarhetsmatris
+
+Källmarkering: `[Granskningsnotering]`
+
+| Kunskapsområde | Primär källa | Kompletterande källa | Status |
+|---|---|---|---|
+| Syfte med egenkontroll | `[K1]`, `[K2]` | `[Härledning]` | Täckt |
+| Anpassa egenkontroll | `[K1]`, `[K2]` | `[K3]` | Täckt |
+| Fylla i egenkontroll | `[K1]`, `[K2]` | `[K3]` | Täckt |
+| Beställare/byggherre | `[K1]`, `[K2]` | `[K4]`, `[K7]` | Täckt |
+| Entreprenör och underentreprenör | `[K1]`, `[K2]` | `[Härledning]` | Täckt |
+| Referenser till krav och handlingar | `[K1]`, `[K2]` | `[K6]` | Täckt |
+| Kontrollresultat | `[K1]`, `[K2]` | `[K3]` | Täckt |
+| Ej bedömd digital status | `[K3]` | `[Härledning]` | Täckt |
+| Kommentar vid negativt resultat | `[K3]` | `[Härledning]` | Täckt |
+| Signering | `[K1]`, `[K2]` | `[K3]` | Täckt |
+| Kontrollansvarig | `[K1]`, `[K2]` | `[K4]`, `[K5]`, `[K7]` | Täckt med gränsdragning |
+| Kontrollplan enligt PBL | `[K4]`, `[K5]`, `[K6]`, `[K7]` | `[Härledning]` | Täckt på övergripande nivå |
+| Mallbibliotek | `[K3]` | Separat masterlista saknas | Delvis täckt |
+| 123 kontrollpunkter | `[K3]` | Separat masterlista saknas | Källlucka |
+| UX-insikter | `[K1]`, `[K2]`, `[K3]` | `[Härledning]` | Täckt som kunskapsunderlag |
+| Hjälptexter | `[K1]`, `[K2]`, `[K3]` | `[Härledning]` | Täckt som utkastunderlag |
+| Språkprinciper | `[K1]`, `[K2]`, `[K3]` | `[Härledning]` | Täckt som grund |
+| Avgränsningar | `[K3]` | `[Härledning]` | Täckt |
 
 ## Krav På Framtida Härledda Dokument
 
