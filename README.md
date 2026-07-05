@@ -28,6 +28,7 @@ Primära dokument:
 - [`docs/CONTENT_GUIDE.md`](docs/CONTENT_GUIDE.md) – hjälptexter, instruktioner och exporttexter
 - [`docs/UX_GUIDELINES.md`](docs/UX_GUIDELINES.md) – UX-principer och vägledning
 - [`docs/PRODUCT_STRUCTURE.md`](docs/PRODUCT_STRUCTURE.md) – produktstruktur, startsida och kontrollcenter-känsla
+- [`docs/PRODUCT_EXPERIENCE.md`](docs/PRODUCT_EXPERIENCE.md) – produktpersonlighet, känslomål och upplevelseprinciper
 - [`docs/DECISIONS.md`](docs/DECISIONS.md) – beslut och avgränsningar
 - [`docs/CHANGELOG.md`](docs/CHANGELOG.md) – viktiga dokumentationsändringar
 
@@ -45,6 +46,7 @@ docs/
 ├── CONTENT_GUIDE.md
 ├── UX_GUIDELINES.md
 ├── PRODUCT_STRUCTURE.md
+├── PRODUCT_EXPERIENCE.md
 ├── DECISIONS.md
 ├── CHANGELOG.md
 ├── source-material/

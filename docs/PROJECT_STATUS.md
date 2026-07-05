@@ -33,6 +33,7 @@ Målet är att skapa en tydlig och professionell källa till sanning innan imple
 - `README.md` finns.
 - `docs/APP_BLUEPRINT.md` finns och beskriver produktens grundkrav.
 - `docs/PRODUCT_STRUCTURE.md` finns och beskriver appens produktstruktur, startsida och kontrollcenter-känsla för v1.0.
+- `docs/PRODUCT_EXPERIENCE.md` finns och beskriver produktpersonlighet, känslomål, tempo, mikrointeraktioner och upplevelseprinciper.
 - Projektregler finns i `.cursor/rules/project-rules.mdc`.
 - Appen är avgränsad som fristående produkt.
 - Onboarding App v1.0 är beslutad som referens för design, struktur, arbetsprocess, dokumentation och arkitektur.
@@ -90,5 +91,5 @@ Referensen ska inspirera arbetssättet och produktkänslan, men Egenkontroll App
 1. `docs/PROJECT_STATUS.md`
 2. `docs/APP_BLUEPRINT.md`
 3. `README.md`
-4. Relevant dokument i `docs/` beroende på uppgift
+4. Relevant dokument i `docs/` beroende på uppgift, till exempel `docs/PRODUCT_EXPERIENCE.md` vid UX- och upplevelsebeslut
 
