@@ -42,17 +42,35 @@ Varje ändring ska vara kort motiverad.
 - `CONTENT_GUIDE.md` beskriver hur orden används i appens texter.
 - `DOMAIN_MODEL.md` beskriver begreppens relationer.
 
-## Mall för framtida innehåll
-
 | Rekommenderad term | Använd inte | Förklaring | Används i |
 |---|---|---|---|
-| _Fylls senare_ | _Fylls senare_ | _Fylls senare_ | _Fylls senare_ |
+| Egenkontroll | Kontrollärende, dokument, blankett | Huvudobjektet användaren skapar och genomför | UI, dokumentation, export |
+| Mall | Template, formulärmall | Startpunkt för en egenkontroll | Mallväljare, projektstart |
+| Frågebank | Masterlista i UI, datatabell | Intern kunskapsstruktur bakom mallarnas frågor | Dokumentation, implementation |
+| Kontrollfråga | Rad, punkt i UI | Digital fråga som användaren besvarar | Arbetsyta, hjälp, sammanfattning |
+| Kontrollpunkt | Fråga när originalet avses | Ursprunglig kontrollpunkt från källmaterialet | Källanalys, dokumentmappning |
+| Hjälptext | Tooltip som enda hjälp | Kort förklaring som hjälper användaren förstå frågan | Frågekort, sidopanel |
+| Standardvärde | Default på engelska | Förvalt svar när det minskar onödigt skrivande | Frågekort |
+| Följdfråga | Subfråga, extra fält | Fråga som visas på grund av ett tidigare svar | Villkorad logik |
+| Lokal sammanfattning | Rapport, export | Sammanfattning på skärm i Sprint 1 | Klar-skärm |
+| Godkänd | OK som enda term | Kontrollen är utförd och godkänd | Statusval |
+| Ej godkänd | Fel som enda term | Kontrollen är utförd men avvikelse finns | Statusval |
+| Ej kontrollerad | Ej relevant utan förklaring | Kontrollen kunde eller skulle inte utföras | Statusval |
+| Ej bedömd | Tom, obesvarad | Frågan är ännu inte behandlad | Progress, sammanfattning |
 
 ## Termer att granska
 
-_Fylls senare._
+- `Beställare/byggherre`: behöver testas i UI så det inte känns juridiskt tyngre än nödvändigt.
+- `Kontrollansvarig`: ska användas försiktigt eftersom det kan vara PBL-roll eller praktisk granskare.
+- `Kontrollpunkt` kontra `kontrollfråga`: UI bör prioritera `fråga`, medan dokumentmappning kan använda `kontrollpunkt`.
 
 ## Termer att undvika
 
-_Fylls senare._
+- Formulär
+- Blankettvy
+- Ärendehantering
+- Workflow engine
+- Legal e-signering
+- PBL-säkring
+- AI-genererad kontrollpunkt som v1.0-löfte
 

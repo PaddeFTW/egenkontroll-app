@@ -57,21 +57,65 @@ Uppdatera när:
 
 ### Ton
 
-_Fylls senare._
+Tonen ska vara lugn, konkret och arbetsnära.
+
+Skriv som en erfaren arbetsledare:
+
+- kort
+- tydligt
+- praktiskt
+- utan skuld
+- med nästa steg synligt
 
 ### Tilltal
 
-_Fylls senare._
+Använd direkt tilltal när det hjälper:
+
+- `Välj en mall som passar arbetet.`
+- `Svara på frågorna. Du kan ändra innan du är klar.`
+- `Beskriv varför punkten inte kunde kontrolleras.`
+
+Undvik att låta appen som en myndighet eller juridisk rådgivare.
 
 ### Ord att använda
 
-_Fylls senare._
+- egenkontroll
+- mall
+- fråga
+- kontrollfråga
+- hjälptext
+- standardvärde
+- följdfråga
+- progress
+- sammanfattning
+- godkänd
+- ej godkänd
+- ej kontrollerad
+- ej bedömd
 
 ### Ord att undvika
 
-_Fylls senare._
+- formulär när det beskriver arbetsflödet
+- blankett när det beskriver appens UI
+- ärende om inte en framtida ärendemodul beslutas
+- compliance
+- verifiera regulatorisk efterlevnad
+- legal e-signering
+- AI-förslag som faktisk funktion innan AI är beslutat
 
 ### Exempel
 
-_Fylls senare._
+Skriv hellre:
+
+- `Kontrollera att momentet är utfört enligt ritning.`
+- `Det här är förvalt eftersom det oftast gäller när arbetet är klart.`
+- `Skriv en kort kommentar så avvikelsen går att följa upp.`
+- `Nästa fråga visas eftersom du valde Ej godkänd.`
+
+Skriv inte:
+
+- `Fyll i samtliga obligatoriska formulärfält.`
+- `Validering misslyckades.`
+- `AI kommer att kvalitetssäkra kontrollpunkten.`
+- `Systemet säkerställer PBL-uppfyllelse.`
 

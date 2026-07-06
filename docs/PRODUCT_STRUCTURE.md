@@ -148,22 +148,26 @@ Primära handlingar:
 
 Slutförda egenkontroller ska kännas arkiverade och trygga, men inte som ett dokumenthanteringssystem.
 
-## 10. Mallbibliotek
+## 10. Mallbibliotek Och Frågebank
 
 Mallbiblioteket ska finnas tillgängligt men inte dominera startsidan.
 
 Syftet med mallbiblioteket är att hjälpa användaren välja rätt startpunkt för en ny egenkontroll.
+
+Masterlistan ska behandlas som frågebank. Det betyder att mallbiblioteket inte bara väljer en lista med punkter, utan väljer ett färdigt frågeflöde som kan guida användaren genom kontrollen.
 
 Mallbiblioteket ska visa:
 
 - mallnamn
 - kort beskrivning
 - kategori eller område
-- antal kontrollpunkter om det är känt
+- antal frågor eller kontrollpunkter om det är känt
 - tydlig handling för att skapa egenkontroll från mallen
 - tom egenkontroll som alternativ
 
 Mallbiblioteket ska vara lugnt och överskådligt. Det ska inte kännas som en marketplace eller en stor plattform.
+
+Frågebanken ska inte visas som intern metadata. Användaren ska möta den som korta, tydliga frågor med hjälptext, standardval och nästa steg.
 
 ## 11. Att Göra / Nästa Steg
 
@@ -229,7 +233,7 @@ Flödet ska hjälpa användaren att:
 4. ange beställare/byggherre
 5. ange entreprenör
 6. lägga till referenser
-7. granska och anpassa kontrollpunkter
+7. granska och anpassa kontrollfrågor
 8. starta kontrollen
 
 Användaren ska förstå att en vald mall kopieras till den nya egenkontrollen. Anpassningar ska gälla den aktuella egenkontrollen, inte originalmallen.
@@ -246,7 +250,7 @@ Arbetsytan ska visa:
 - relevant projektinformation
 - referenser
 - progress
-- grupperade kontrollpunkter
+- grupperade kontrollfrågor
 - statusval: Godkänd, Ej godkänd, Ej kontrollerad
 - ej bedömd status för obehandlade punkter
 - kontrollant
@@ -256,13 +260,15 @@ Arbetsytan ska visa:
 
 Arbetsytan ska vara fokuserad. Den ska inte visa startsidans alla sektioner eller mallbiblioteket samtidigt.
 
-Kontrollpunktens kort eller rad ska göra det tydligt:
+Kontrollfrågans kort eller rad ska göra det tydligt:
 
 - vad som ska kontrolleras
+- vad användaren rekommenderas att svara om allt är normalt
 - vilket resultat som är valt
 - om kommentar krävs
 - vem som kontrollerat
 - när kontrollen gjordes
+- varför frågan finns om användaren behöver hjälp
 
 ## 15. Sammanställning
 
@@ -491,8 +497,22 @@ Bör innehålla:
 - mallnamn
 - kort beskrivning
 - område
-- antal kontrollpunkter om känt
+- antal frågor eller kontrollpunkter om känt
 - handling: skapa från mall
+
+### Frågekort
+
+Används i egenkontrollens arbetsyta.
+
+Bör innehålla:
+
+- fråga
+- kort hjälptext eller länk till hjälp
+- statusval eller svarskontroll
+- standardval när det är lämpligt
+- kommentar nära svaret
+- villkorad följdfråga när svaret kräver mer information
+- tydligt nästa steg
 
 ## 22. Vad Som INTE Ingår
 
@@ -532,6 +552,7 @@ Produktstrukturen är redo för implementation när:
 - en egenkontroll kan öppnas från startsidan
 - mallbiblioteket är tillgängligt men inte dominerande
 - projektkort och egenkontrollkort är definierade som återkommande mönster
+- frågekort är definierat som återkommande mönster
 - tomma lägen är hjälpsamma
 - fel- och varningslägen hjälper användaren framåt
 - mobilstrukturen fungerar utan breda tabeller

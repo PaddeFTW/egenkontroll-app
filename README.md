@@ -6,9 +6,9 @@ Appen ska vara en fristående kommersiell produkt. Den ska hjälpa användaren a
 
 ## Projektstatus
 
-Projektet är i dokumentationsfas.
+Projektet är i sista planeringssteg inför Sprint 1.
 
-Ingen applikationskod ska skrivas i denna fas. Ingen databas ska skapas. Inga paket ska installeras.
+Ingen applikationskod har skrivits i denna fas. Ingen databas ska skapas och inga paket ska installeras innan Sprint 1 uttryckligen godkänns.
 
 Läs alltid [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md) i början av en arbetssession.
 
@@ -31,6 +31,7 @@ Primära dokument:
 - [`docs/PRODUCT_EXPERIENCE.md`](docs/PRODUCT_EXPERIENCE.md) – produktpersonlighet, känslomål och upplevelseprinciper
 - [`docs/DECISIONS.md`](docs/DECISIONS.md) – beslut och avgränsningar
 - [`docs/CHANGELOG.md`](docs/CHANGELOG.md) – viktiga dokumentationsändringar
+- [`docs/IMPLEMENTATION_PLAN_V1.md`](docs/IMPLEMENTATION_PLAN_V1.md) – plan för Sprint 1 till version 1.0
 
 ## Dokumentstruktur
 
@@ -49,6 +50,7 @@ docs/
 ├── PRODUCT_EXPERIENCE.md
 ├── DECISIONS.md
 ├── CHANGELOG.md
+├── IMPLEMENTATION_PLAN_V1.md
 ├── source-material/
 │   └── README.md
 └── analysis/
@@ -93,6 +95,7 @@ Nuvarande fas stannar vid dokumentation. Implementation kommer senare efter sepa
 ## Produktprinciper
 
 - Appen ska fungera som en erfaren arbetsledare.
+- Masterlistan ska behandlas som projektets frågebank.
 - Appen ska vägleda användaren steg för steg.
 - Språket ska vara byggbranschens vardagsspråk.
 - Konsultspråk, myndighetsspråk och onödig ISO-jargong ska undvikas.

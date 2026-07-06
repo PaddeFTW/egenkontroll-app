@@ -59,5 +59,19 @@ Beslut ska vara korta och tydliga.
 
 ## Beslut
 
-_Fylls senare._
+### 2026-07-06 – Masterlistan är projektets frågebank
+
+**Status:** Godkänt  
+**Beslut:** Masterlistan ska inte behandlas som en enkel lista i appen. Den ska behandlas som projektets frågebank där varje kontrollpunkt kan omformas till en intelligent kontrollfråga.  
+**Motivering:** Produkten ska digitalisera kunskap, inte Word-rader. Frågebanken gör det möjligt att ge hjälptext, standardvärden, villkorad logik och nästa steg utan att skapa ett tungt formulär.  
+**Konsekvens:** `APP_BLUEPRINT.md`, `DOMAIN_MODEL.md`, `CONTENT_GUIDE.md`, `UX_GUIDELINES.md`, `TERMINOLOGY.md` och `DEFINITIONS.md` ska använda kontrollfråga/frågebank som digital huvudmodell. Full konvertering av 123 kontrollpunkter är ett separat innehållsarbete.  
+**Berörda dokument:** `docs/APP_BLUEPRINT.md`, `docs/DOMAIN_MODEL.md`, `docs/CONTENT_GUIDE.md`, `docs/UX_GUIDELINES.md`, `docs/TERMINOLOGY.md`, `docs/DEFINITIONS.md`, `docs/IMPLEMENTATION_PLAN_V1.md`.
+
+### 2026-07-06 – Sprint 1 är en backendfri vertical slice
+
+**Status:** Godkänt  
+**Beslut:** Sprint 1 ska endast innehålla startsida, mallväljare, projektstart, 5 mockfrågor, progress, hjälptext, standardsvar, villkorad följdfråga, klar-skärm och lokal sammanfattning.  
+**Motivering:** Projektet behöver bevisa kärnupplevelsen innan backend, export, AI, databas eller full frågebank byggs.  
+**Konsekvens:** Ingen Supabase, ingen backend, ingen autentisering, ingen databas, ingen AI, ingen export, ingen PDF, ingen Word-export, ingen delning och ingen implementation av hela appen i Sprint 1.  
+**Berörda dokument:** `docs/APP_BLUEPRINT.md`, `docs/PROJECT_STATUS.md`, `docs/UX_GUIDELINES.md`, `docs/DOMAIN_MODEL.md`, `docs/IMPLEMENTATION_PLAN_V1.md`.
 

@@ -1,11 +1,11 @@
 ﻿# Egenkontroll App – Produktanalys och App Blueprint
 
-**Version:** 1.0  
-**Datum:** 2026-07-03  
-**Status:** Godkänd  
+**Version:** 1.1  
+**Datum:** 2026-07-06  
+**Status:** Godkänd, uppdaterad inför Sprint 1  
 **Projekt:** Egenkontroll App  
 **Produktfamilj:** Quality WorX Apps  
-**Kodstatus:** Redo för implementationsplan
+**Kodstatus:** Redo för Sprint 1 vertical slice
 
 ## Dokumentrelationer
 
@@ -111,13 +111,40 @@ Word-mallen styr:
 - signerings- och granskningslogik
 - exportens innehåll
 
+Masterlistan styr inte längre enbart en lista med kontrollpunkter. Den är projektets frågebank.
+
 Masterlistan styr:
 
 - mallbiblioteket
 - kategorier
 - grupperingar
-- fördefinierade kontrollpunkter
+- fördefinierade kontrollfrågor
+- frågornas hjälp, standardvärden och villkor
 - framtida produktutbyggnad
+
+Varje kontrollpunkt ska därför omformas till en intelligent fråga som hjälper användaren framåt, inte bara en rad att bocka av.
+
+En kontrollfråga ska kunna bära:
+
+- fråga
+- kategori
+- sektion
+- svarstyp
+- standardvärde
+- hjälptext
+- varför frågan finns
+- exempel
+- placeholder
+- tooltip
+- rekommenderad formulering
+- AI-förslag som framtida stöd, inte Sprint 1-krav
+- foto-regel som framtida stöd, inte Sprint 1-krav
+- bilageregel som framtida stöd, inte Sprint 1-krav
+- ljudstöd som framtida tillgänglighetsstöd
+- dokumentmappning
+- uppskattad tidsåtgång
+- villkorad logik
+- nästa steg
 
 ---
 
@@ -192,8 +219,8 @@ Användaren ska kunna:
 3. Ange beställare eller byggherre.
 4. Ange entreprenör.
 5. Ange vilka krav, ritningar eller handlingar kontrollen avser.
-6. Granska och anpassa kontrollpunkterna.
-7. Kontrollera varje moment.
+6. Granska och anpassa kontrollfrågorna.
+7. Besvara varje kontrollfråga.
 8. Markera resultat.
 9. Dokumentera fel eller ej genomförda moment.
 10. Ange vem som kontrollerat och när.
@@ -211,7 +238,7 @@ Användaren ska kunna:
 | Beställare | Fält med valbar etikett: Beställare eller Byggherre |
 | Entreprenör | Företags-/entreprenörsfält |
 | Referens till | En eller flera referenser |
-| Kontrollmoment | Digital lista med kontrollpunkter |
+| Kontrollmoment | Digital frågebank med kontrollfrågor |
 | Ruta 1 | Godkänd |
 | Ruta 2 | Ej godkänd |
 | Ruta 3 | Ej kontrollerad |
@@ -233,9 +260,9 @@ Startsida
 → Ny egenkontroll
 → Välj mall
 → Fyll i projektinformation
-→ Anpassa kontrollpunkter
+→ Anpassa kontrollfrågor
 → Starta kontroll
-→ Bedöm kontrollpunkterna
+→ Besvara kontrollfrågor
 → Granska sammanställning
 → Signera som utförare
 → Granska/signera som kontrollansvarig
@@ -271,7 +298,7 @@ Steg:
 3. Ange beställare/byggherre.
 4. Ange entreprenör.
 5. Lägg till referenser.
-6. Granska kontrollpunkter.
+6. Granska kontrollfrågor.
 7. Starta egenkontrollen.
 
 ### 8.3 Genomför egenkontroll
@@ -281,7 +308,7 @@ Visar:
 - egenkontrollens namn
 - projektinformation
 - framsteg
-- grupperade kontrollpunkter
+- grupperade kontrollfrågor
 - resultatknappar
 - kontrollant
 - datum
@@ -310,7 +337,7 @@ Exporten ska innehålla:
 - beställare/byggherre
 - entreprenör
 - referenser
-- samtliga kontrollpunkter
+- samtliga kontrollfrågor och dokumentmappade kontrollpunkter
 - resultat
 - datum och kontrollant
 - kommentarer
@@ -353,7 +380,7 @@ En mall ska innehålla:
 - kort beskrivning
 - kategori
 - valfria undergrupper
-- ordnade kontrollpunkter
+- ordnade kontrollfrågor
 - versionsnummer
 - aktiv/inaktiv-status
 
@@ -362,14 +389,30 @@ En mall ska innehålla:
 Innan kontrollen startas ska användaren kunna:
 
 - ändra dokumentnamn
-- ändra formulering av kontrollpunkt
-- lägga till kontrollpunkt
-- ta bort kontrollpunkt
+- ändra formulering av kontrollfråga
+- lägga till kontrollfråga
+- ta bort kontrollfråga
 - ändra ordning
 - skapa en ny grupp
-- välja bort irrelevanta kontrollpunkter
+- välja bort irrelevanta kontrollfrågor
 
 Originalmallen ska inte ändras när en användare anpassar en enskild egenkontroll.
+
+### 9.4 Frågebank
+
+Masterlistan är projektets frågebank. Frågebanken ska göra varje kontrollpunkt lättare att förstå, besvara och dokumentera.
+
+Frågebanken ska inte visas som en tung intern datatabell för användaren. I appen ska den upplevas som korta, tydliga frågor med rätt hjälp vid rätt tillfälle.
+
+Sprint 1 ska endast använda 5 mockfrågor som demonstrerar modellen:
+
+- standardsvar
+- hjälptext
+- progress
+- villkorad följdfråga
+- lokal sammanfattning
+
+Full konvertering av 123 kontrollpunkter till frågebank ingår inte i Sprint 1.
 
 ---
 
@@ -460,12 +503,26 @@ Detta är en produktmodell, inte ett färdigt databasschema.
 - name
 - order
 
-### TemplatePoint
+### TemplateQuestion
 
 - id
 - templateId
 - sectionId
-- text
+- question
+- category
+- section
+- answerType
+- defaultValue
+- helpText
+- whyItMatters
+- example
+- placeholder
+- tooltip
+- recommendedWording
+- documentMapping
+- estimatedCompletionTime
+- conditionalLogic
+- nextStep
 - order
 - active
 
@@ -485,15 +542,16 @@ Detta är en produktmodell, inte ett färdigt databasschema.
 - updatedAt
 - completedAt
 
-### InspectionPoint
+### InspectionAnswer
 
 - id
 - inspectionId
-- sourceTemplatePointId
+- sourceTemplateQuestionId
 - sectionName
-- text
+- question
 - order
 - result
+- answer
 - comment
 - checkedBy
 - checkedAt
@@ -534,10 +592,10 @@ Granskningsstatus kan aktiveras när behovet är bekräftat.
 ## 14. Affärsregler
 
 1. En egenkontroll skapas från en mall eller som tom kontroll.
-2. En skapad egenkontroll får en egen kopia av kontrollpunkterna.
+2. En skapad egenkontroll får en egen kopia av kontrollfrågorna.
 3. Ändringar i en egenkontroll får inte ändra originalmallen.
-4. Kontrollpunkter ska visas i bestämd ordning.
-5. Varje kontrollpunkt kan endast ha ett resultat åt gången.
+4. Kontrollfrågor ska visas i bestämd ordning.
+5. Varje kontrollfråga kan endast ha ett aktivt resultat eller svarsläge åt gången.
 6. Resultat ska kunna ändras innan egenkontrollen slutförs.
 7. Ej godkända och ej kontrollerade punkter ska kräva förklaring.
 8. Slutförande ska varna om punkter fortfarande är ej bedömda.
@@ -555,14 +613,14 @@ Granskningsstatus kan aktiveras när behovet är bekräftat.
 - 11 färdiga mallar
 - tom mall
 - 123 kontrollpunkter som startinnehåll
-- grupperingar från masterlistan
+- grupperingar och frågemetadata från masterlistan
 
 ### Funktion
 
 - skapa egenkontroll
 - välja mall
 - ange projektinformation
-- anpassa kontrollpunkter
+- anpassa kontrollfrågor
 - spara utkast
 - genomföra kontroll
 - ange resultat
@@ -574,6 +632,23 @@ Granskningsstatus kan aktiveras när behovet är bekräftat.
 - sammanställning
 - PDF/utskrift
 - pågående och slutförda kontroller
+
+### Sprint 1 Vertical Slice
+
+Sprint 1 är inte hela MVP. Sprint 1 ska endast bevisa kärnupplevelsen utan backend:
+
+- startsida
+- mallväljare
+- projektstart
+- 5 mockfrågor
+- progress
+- hjälptext
+- standardsvar
+- villkorad följdfråga
+- klar-skärm
+- lokal sammanfattning
+
+Sprint 1 ska inte innehålla Supabase, AI, export, PDF, Word, delning, autentisering, databas eller backend.
 
 ### UX
 
@@ -807,6 +882,14 @@ Risk:
 ### Beslut 6 – Betalning och abonnemang
 
 **Godkänt:** Betalning och abonnemang ligger utanför appens kärna. Produktionsinloggning beslutas separat före lansering.
+
+### Beslut 7 – Masterlistan är frågebank
+
+**Godkänt:** Masterlistan ska behandlas som projektets frågebank. Kontrollpunkter ska omformas till intelligenta kontrollfrågor med hjälp, standardvärden, dokumentmappning och villkorad logik där det ger användarvärde.
+
+### Beslut 8 – Sprint 1 är en backendfri vertical slice
+
+**Godkänt:** Sprint 1 ska endast bevisa kärnflödet med lokal state och 5 mockfrågor. Backend, Supabase, AI, export, PDF, Word, delning, autentisering och databas skjuts till senare sprintar eller beslut.
 
 ---
 

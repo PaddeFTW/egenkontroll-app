@@ -17,16 +17,16 @@ Det ger en snabb och gemensam bild av:
 
 **Projekt:** Egenkontroll App  
 **Produkttyp:** Fristående kommersiell webbapplikation  
-**Aktuell fas:** Dokumentationsgrund och kunskapsstruktur  
-**Kodstatus:** Ingen implementation ska göras i denna fas  
+**Aktuell fas:** Sprint 1-förberedelse klar för kodstart efter godkännande  
+**Kodstatus:** Ingen implementation gjord. Sprint 1 får starta först efter uttryckligt godkännande.  
 **Databasstatus:** Ingen databas ska skapas i denna fas  
 **Paketstatus:** Inga paket ska installeras i denna fas
 
 ## Aktuell fas
 
-Projektet etablerar sin dokumentationsgrund.
+Projektet har gått från dokumentationsgrund till sista planeringssteg inför implementation.
 
-Målet är att skapa en tydlig och professionell källa till sanning innan implementation planeras eller påbörjas.
+Målet är att Sprint 1 ska vara en liten vertical slice som bevisar kärnupplevelsen utan backend, databas, Supabase, AI, export, PDF, Word, delning eller autentisering.
 
 ## Färdigt
 
@@ -37,28 +37,27 @@ Målet är att skapa en tydlig och professionell källa till sanning innan imple
 - Projektregler finns i `.cursor/rules/project-rules.mdc`.
 - Appen är avgränsad som fristående produkt.
 - Onboarding App v1.0 är beslutad som referens för design, struktur, arbetsprocess, dokumentation och arkitektur.
+- Masterlistan är beslutad som projektets frågebank, inte bara en lista.
+- `docs/IMPLEMENTATION_PLAN_V1.md` finns som styrande plan inför Sprint 1.
 
 ## Pågående
 
-- Etablering av dokumentationsstruktur.
-- Skapande av styrdokument och dokumentmallar.
-- Förberedelse för systematisk kunskapsutvinning från originalmaterial.
+- Väntar på godkännande att starta Sprint 1-implementation.
+- Ingen kod, databas, backend eller paketinstallation har gjorts i denna planeringsfas.
 
 ## Blockerare
 
-- Originalmaterialet behöver vara tydligt placerat eller länkat i `docs/source-material/`.
-- Kunskap från originaldokumenten är ännu inte strukturerad i `KNOWLEDGE_BASE.md`.
-- Domänmodell, terminologi, språkguide och UX-riktlinjer är ännu mallar och inte färdigt innehåll.
+- Den separata masterlistan med 123 kontrollpunkter finns inte som verifierbar originalfil i `docs/source-material/`.
+- Full konvertering från 123 kontrollpunkter till komplett frågebank återstår.
+- Produktionsbeslut om lagring, autentisering och molnåtkomst återstår och ska inte lösas i Sprint 1.
 
 ## Nästa steg
 
-1. Placera eller dokumentera källmaterial i `docs/source-material/`.
-2. Analysera originalmaterial utan att ändra det.
-3. Fyll `KNOWLEDGE_BASE.md` med verifierad kunskap från källmaterialet.
-4. Fyll `DOMAIN_MODEL.md` med centrala objekt och arbetsflöden.
-5. Fyll `TERMINOLOGY.md` och `LANGUAGE_GUIDE.md` med byggbranschens vardagsspråk.
-6. Granska om `APP_BLUEPRINT.md` behöver justeras efter kunskapsanalys.
-7. Skapa därefter en separat implementationsplan.
+1. Granska och godkänn `docs/IMPLEMENTATION_PLAN_V1.md`.
+2. Starta Sprint 1 med endast frontend, lokal state och 5 mockfrågor.
+3. Bygg startsida, mallväljare, projektstart, frågeflöde, progress, hjälptext, standardsvar, villkorad följdfråga, klar-skärm och lokal sammanfattning.
+4. Kör relevant QA för Sprint 1.
+5. Först efter Sprint 1: besluta Sprint 2-innehåll och när full frågebank ska byggas.
 
 ## Referensprojekt
 
@@ -84,6 +83,8 @@ Referensen ska inspirera arbetssättet och produktkänslan, men Egenkontroll App
 - Språket ska vara byggbranschens vardagsspråk.
 - Konsultspråk, myndighetsspråk och onödig ISO-jargong ska undvikas.
 - Ingen kod, databas, paketinstallation eller React-komponent ska skapas i dokumentationsfasen.
+- Sprint 1 ska vara backendfri vertical slice.
+- Masterlistan ska omformas till frågebank.
 - Commit görs endast efter uttryckligt godkännande.
 
 ## Dokument som ska läsas vid sessionsstart

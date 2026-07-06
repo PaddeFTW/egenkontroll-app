@@ -41,29 +41,39 @@ Definitioner ska vara korta. Längre resonemang hör hemma i `KNOWLEDGE_BASE.md`
 - `DOMAIN_MODEL.md` visar hur begreppet hänger ihop med andra begrepp.
 - `APP_BLUEPRINT.md` använder definitionerna i produktkrav.
 
-## Mall för framtida innehåll
-
 ### Egenkontroll
 
-**Definition:** _Fylls senare._
+**Definition:** En dokumenterad kontroll av att utfört arbete följer relevanta krav, ritningar, instruktioner eller andra handlingar.
 
-**Betyder inte:** _Fylls senare._
+**Betyder inte:** En full kontrollplan enligt PBL, juridisk rådgivning eller ett komplett ledningssystem.
 
 ### Kontrollpunkt
 
-**Definition:** _Fylls senare._
+**Definition:** Ursprungligt begrepp från källmaterialet för ett moment som ska kontrolleras.
 
-**Betyder inte:** _Fylls senare._
+**Betyder inte:** En färdig UI-rad som ska kopieras direkt från Word till appen.
+
+### Kontrollfråga
+
+**Definition:** Appens digitala form av en kontrollpunkt, formulerad som en fråga eller tydlig kontrolluppgift som användaren kan besvara.
+
+**Betyder inte:** En AI-genererad fråga eller ett krav på fritextsvar.
+
+### Frågebank
+
+**Definition:** Den strukturerade kunskap som masterlistan ska omvandlas till: kontrollfrågor med kategori, sektion, svarstyp, hjälp, standardvärden, villkor och nästa steg.
+
+**Betyder inte:** En synlig tabell med alla interna fält eller en databas i Sprint 1.
 
 ### Mall
 
-**Definition:** _Fylls senare._
+**Definition:** En återanvändbar startpunkt för en egenkontroll.
 
-**Betyder inte:** _Fylls senare._
+**Betyder inte:** En separat teknisk app eller ett separat kodflöde per yrkesområde.
 
 ### Signering
 
-**Definition:** _Fylls senare._
+**Definition:** En enkel bekräftelse med namn, datum och tidsstämpel.
 
-**Betyder inte:** _Fylls senare._
+**Betyder inte:** BankID, kvalificerad elektronisk signatur eller avancerad e-signering.
 
