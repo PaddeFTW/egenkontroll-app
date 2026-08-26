@@ -2,12 +2,13 @@ import type { ProjectStart, Template } from "./sprint-one-data";
 import type { InspectionSummary } from "./sprint-one-logic";
 
 function escapeHtml(text: string) {
-  return text
-    .replaceAll("&", "&")
-    .replaceAll("<", "<")
-    .replaceAll(">", ">")
-    .replaceAll('"', """)
-    .replaceAll("'", "&#39;");
+  return text.replace(/[&<>"']/g, (ch) => {
+    if (ch === "&") return "&#38;";
+    if (ch === "<") return "&#60;";
+    if (ch === ">") return "&#62;";
+    if (ch === '"') return "&#34;";
+    return "&#39;";
+  });
 }
 
 export function buildEgenkontrollExport(
@@ -41,22 +42,14 @@ export function buildEgenkontrollExport(
   ];
 
   const text = lines.join("\n");
-  const html = `<!DOCTYPE html>
-<html lang="sv">
-<head>
-  <meta charset="utf-8" />
-  <title>${escapeHtml(title)}</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; color: #18181b; line-height: 1.5; }
-    h1 { font-size: 24px; margin-bottom: 24px; }
-    pre { white-space: pre-wrap; font-family: inherit; }
-  </style>
-</head>
-<body>
-  <h1>${escapeHtml(title)}</h1>
-  <pre>${escapeHtml(text)}</pre>
-</body>
-</html>`;
+  const html =
+    "<!DOCTYPE html>\n<html lang=\"sv\">\n<head>\n<meta charset=\"utf-8\" />\n<title>" +
+    escapeHtml(title) +
+    "</title>\n</head>\n<body>\n<h1>" +
+    escapeHtml(title) +
+    "</h1>\n<pre>" +
+    escapeHtml(text) +
+    "</pre>\n</body>\n</html>";
 
   return { title, baseFileName, text, html };
 }
