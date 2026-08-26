@@ -20,6 +20,9 @@ import {
   templates,
 } from "./sprint-one-data";
 import { calculateProgress, createSummary } from "./sprint-one-logic";
+import { downloadEgenkontroll } from "./sprint-one-export";
+
+const STORAGE_KEY = "egenkontroll-app-v1";
 
 export default function Home() {
   const [step, setStep] = useState<InspectionStep>("home");
@@ -62,6 +65,27 @@ export default function Home() {
         followUpAnswer,
       },
     }));
+  }
+
+  function persistCompleted() {
+    try {
+      const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "[]") as unknown[];
+      existing.unshift({
+        savedAt: new Date().toISOString(),
+        templateId: selectedTemplate?.id,
+        project,
+        answers,
+        summary,
+      });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(existing.slice(0, 25)));
+    } catch {
+      // ignore storage errors in Sprint 1
+    }
+  }
+
+  function handleComplete() {
+    persistCompleted();
+    setStep("complete");
   }
 
   function resetFlow() {
@@ -114,17 +138,42 @@ export default function Home() {
               Math.min(currentIndex + 1, sprintOneQuestions.length - 1),
             )
           }
-          onComplete={() => setStep("complete")}
+          onComplete={handleComplete}
         />
       ) : null}
 
       {step === "complete" && selectedTemplate ? (
-        <CompletionScreen
-          template={selectedTemplate}
-          project={project}
-          summary={summary}
-          onRestart={resetFlow}
-        />
+        <>
+          <CompletionScreen
+            template={selectedTemplate}
+            project={project}
+            summary={summary}
+            onRestart={resetFlow}
+          />
+          <div className="action-row" style={{ marginTop: 16 }}>
+            <button
+              className="ghost-button"
+              type="button"
+              onClick={() => downloadEgenkontroll(selectedTemplate, project, summary, "pdf")}
+            >
+              Exportera PDF
+            </button>
+            <button
+              className="ghost-button"
+              type="button"
+              onClick={() => downloadEgenkontroll(selectedTemplate, project, summary, "word")}
+            >
+              Exportera Word
+            </button>
+            <button
+              className="ghost-button"
+              type="button"
+              onClick={() => downloadEgenkontroll(selectedTemplate, project, summary, "txt")}
+            >
+              Ladda ner text
+            </button>
+          </div>
+        </>
       ) : null}
     </main>
   );
